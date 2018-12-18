@@ -1,13 +1,14 @@
-fs = require('fs');
+// mongo = require('mongodb');
+// mysql = require('mysql');
+redis = require('redis').createClient();
 
 module.exports = function handler(req, res) {
     if (req.url == '/') {
-        fs.readFile('index.html', function (err, content) {
 
-            if (err) throw err;
+        redis.get("data", process.domain.bind(function (err, data) {
+            throw new Error("redis callback");
 
-            res.end(content);
-        });
+        }));
 
     } else {
         res.statusCode = 404;

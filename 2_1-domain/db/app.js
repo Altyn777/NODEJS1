@@ -2,7 +2,7 @@ domain = require('domain');
 serverDomain = domain.create();
 
 serverDomain.on('error', function (err) {
-    console.error("Домен перехватил %s", err);
+    console.error("Server error %s", err);
     if (server) server.close();
 
     setTimeout(function () {
@@ -13,11 +13,10 @@ serverDomain.on('error', function (err) {
 serverDomain.run(function () {
     http = require('http');
     handler = require('./handler');
-    // database = require('mongodb');
 
     server = http.createServer(function (req, res) {
-        reqDomain = domain.create();
 
+        reqDomain = domain.create();
         reqDomain.add(req);
         reqDomain.add(res);
 
@@ -25,7 +24,7 @@ serverDomain.run(function () {
             res.statusCode = 500;
             res.end("Sorry, " + err);
             console.error("Error for req = ", req);
-            // ...
+
             serverDomain.emit('error', err);
         });
 
