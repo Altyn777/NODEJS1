@@ -1,10 +1,9 @@
-var http = require('http');
-var fs = require('fs');
+http = require('http');
+fs = require('fs');
 // Блокирует => используется там, где нет параллелизма
 // Работает трай...кетч
 // Простой
 http.createServer(function (req, res) {
-    var info;
     if (req.url == '/') {
 
         try {

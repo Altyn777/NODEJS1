@@ -1,4 +1,4 @@
-var fs = require('fs');
+fs = require('fs');
 fs.open(__filename, "r", function (err, file) {
     console.log("IO!");
 });

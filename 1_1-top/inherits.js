@@ -1,4 +1,4 @@
-var util = require('util');
+util = require('util');
 function Animal(name) {
     this.name = name;
 }
@@ -12,6 +12,6 @@ util.inherits(Rabbit, Animal);
 Rabbit.prototype.jump = function () {
     console.log("Прыгает " + this.name);
 };
-var rabbit = new Rabbit("наш кролик");
+rabbit = new Rabbit("наш кролик");
 rabbit.walk();
 rabbit.jump();

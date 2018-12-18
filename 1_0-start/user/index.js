@@ -1,5 +1,5 @@
-var db = require('db');
-var log = require('logger')(module);
+db = require('db');
+log = require('logger')(module);
 function User(name) {
     this.name = name;
 }

@@ -1,5 +1,5 @@
-var EventEmitter = require('events').EventEmitter;
-var server = new EventEmitter;
+EventEmitter = require('events').EventEmitter;
+server = new EventEmitter;
 server.on('request', function (request) {
     request.approved = true;
 });

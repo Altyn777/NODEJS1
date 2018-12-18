@@ -1,8 +1,8 @@
-var EventEmitter = require('events').EventEmitter;
-var db = new EventEmitter();
+EventEmitter = require('events').EventEmitter;
+db = new EventEmitter();
 db.setMaxListeners(10);
 function Request() {
-    var self = this;
+    self = this;
 
     this.bigData = new Array(1e6).join('*');
 
@@ -22,7 +22,7 @@ function Request() {
 }
 
 setInterval(function () {
-    var request = new Request();
+    request = new Request();
     request.end();
     //console.log(process.memoryUsage().heapUsed);
     console.log(db);

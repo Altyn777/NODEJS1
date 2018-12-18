@@ -1,4 +1,4 @@
-var winston = require('winston');
+winston = require('winston');
 
 module.exports = function (module) {
     return makeLogger(module.filename);
@@ -8,7 +8,7 @@ function makeLogger(path) {
 
     if (path.match(/request.js$/)) {
 
-        var transports = [
+        transports = [
 
             new winston.transports.Console({
                 timestamp: true,

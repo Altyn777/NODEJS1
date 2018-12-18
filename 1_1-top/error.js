@@ -1,5 +1,5 @@
-var util = require('util');
-var phrases = {
+util = require('util');
+phrases = {
     "Hello": "Привет",
     "world": "мир"
 };
@@ -33,7 +33,7 @@ function makePage(url) {
     return util.format("%s, %s", getPhrase("Hello"), getPhrase("world"));
 }
 try {
-    var page = makePage('index.html');
+    page = makePage('index.html');
     console.log(page);
 } catch (e) {
     if (e instanceof HttpError) {

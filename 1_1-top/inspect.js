@@ -1,5 +1,5 @@
-var util = require('util');
-var obj = {
+util = require('util');
+obj = {
     a: 5,
     b: 6,
     inspect: function () {

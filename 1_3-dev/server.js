@@ -1,7 +1,7 @@
-var http = require('http');
-var log = require('winston');
+http = require('http');
+log = require('winston');
 
-var server = http.createServer();
+server = http.createServer();
 
 server.on('request', require('./request'));
 

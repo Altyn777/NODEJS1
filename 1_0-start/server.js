@@ -1,11 +1,11 @@
-var log = require('logger')(module);
-var User = require('./user');
-var db = require('db')
+log = require('logger')(module);
+User = require('./user');
+db = require('db')
 db.connect();
 
 function run() {
-    var nika = new User("Ника");
-    var nastya = new User("Настя");
+    nika = new User("Ника");
+    nastya = new User("Настя");
 
     nika.hello(nastya);
     log(db.getPhrase("Run successful"));

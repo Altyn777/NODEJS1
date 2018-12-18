@@ -1,10 +1,10 @@
-var http = require('http');
-var  url = require('url');
+http = require('http');
+url = require('url');
 
-var server = http.createServer();
+server = http.createServer();
 
 server.on('request', function (req, res) {
-    var urlParsed = url.parse(req.url, true);
+    urlParsed = url.parse(req.url, true);
     debugger;
 
     if (req.method == 'GET' && urlParsed.pathname == '/echo' && urlParsed.query.message) {
